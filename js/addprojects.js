@@ -2,6 +2,8 @@
 /*********************************************************
   TODO:
     - Build an array of 3 objects of source data with similar properties and store them in their own JS file
+  Estimated time: about 1 hour
+  Actual time: about 1 hour.
 ************************************************************/
 
 var addProjects = [
@@ -13,17 +15,17 @@ var addProjects = [
     repoLink:     'https://github.com/42towel/ChooseHike'
   },
   {
-    projectName:  '',
-    screenshot:   '',
-    problem:      '',
-    solution:     '',
-    repoLink:     ''
+    projectName:  'Is My Puppers Too Fat?',
+    screenshot:   'fatPupper',
+    problem:      'What\'s a quick way to find out of my adorable dog is TOO overweight? If only there were a way to check.',
+    solution:     'IMP2Fat provides a short and easy way to find out whether you\'re feeding your puppers too much, exercising your puppers enough, and giving your puppers enough scritches and smooches.',
+    repoLink:     'https://github.com/DoggyLove/IMP2Fat'
   },
   {
-    projectName:  '',
-    screenshot:   '',
-    problem:      '',
-    solution:     '',
-    repoLink:     ''
+    projectName:  'Where Did I Leave My Child?',
+    screenshot:   'lostKid',
+    problem:      'Kids are wonderful but phones have all these cool games and fun ways to watch TV. So how can a parent or guardian keep up with where their kid went?',
+    solution:     'Where Did I LMC is a fun way to use social media and our incessantly recording-everything culure to keep an eye (or eyes) on your kids at all times.',
+    repoLink:     'https://github.com/LostKid/WDILMC'
   }
 ];

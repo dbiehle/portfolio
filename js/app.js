@@ -2,11 +2,12 @@
 
 /*********************************************************
   TODO:
-    - Build an array of 3 objects of source data with similar properties and store them in their own JS file
     - create a new JS file to modify the source data and render it to the DOM
-    - create a constructor function for projects or source data
+        Estimated time: 1 hour
     - use jQuery to clone the example markup for each project
+        Estimated time: 30 minutes
     - Project prototype needs a .toHtml() function to add new data to the DOM
+        Estimated time: 30 minutes
 ************************************************************/
 var projects = [];
 
