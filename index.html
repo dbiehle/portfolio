@@ -4,8 +4,11 @@
     <title>Drew Biehle :: Software Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendor/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/base.css" type="text/css">
     <link rel="stylesheet" href="css/icons.css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/layout.css" type="text/css">
+    <link rel="stylesheet" href="css/module.css" type="text/css">
+    <link rel="stylesheet" href="css/state.css" type="text/css">
   </head>
   <body>
     <section class="column col-2">
@@ -31,12 +34,12 @@
       </nav>
     </section>
     <section class="column col-4" id="project-section">
-      <h3>Projects</h3>
+      <h2 class="underline">Projects</h2>
       <article class="template">
-        <p class="project-name">Project Name
-          <br>
-          published about <time>Created On</time>
-        </p>
+        <header>
+          <h2 class="project-name">Project Name<h2>
+          <h5>published about <time>Created On</time> days ago</h5>
+        </header>
         <img src="" >
         <div class="problem">Problem</div>
         <div class="solution">Solution</div>

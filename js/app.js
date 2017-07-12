@@ -27,8 +27,8 @@ Project.prototype.toTheDom = function() {
   var $newProject = $('article.template').clone();
   $newProject.removeClass('template');
 
-  $newProject.find('p').first().text(this.projectName);
-  $newProject.find('time').html(parseInt((new Date() - new Date(this.createdOn))/60/60/24/1000) + ' days ago');
+  $newProject.find('h2.project-name').first().text(this.projectName);
+  $newProject.find('time').html(parseInt((new Date() - new Date(this.createdOn))/60/60/24/1000));
   $newProject.find('img').attr('src', this.screenshot);
   $newProject.find('div.problem').first().text(this.problem);
   $newProject.find('div.solution').first().text(this.solution);
@@ -37,6 +37,7 @@ Project.prototype.toTheDom = function() {
   return $newProject;
 };
 
+// addProjects defined in addprojects.js
 addProjects.sort(function(a,b){
   return ((new Date(b.createdOn)) - (new Date(a.createdOn)));
 });

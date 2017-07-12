@@ -6,6 +6,7 @@
   Actual time: about 1 hour.
 ************************************************************/
 
+// addProjects object used in app.js
 var addProjects = [
   {
     projectName:  'Choose Your Next Adventure',
