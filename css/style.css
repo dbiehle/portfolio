@@ -1,0 +1,97 @@
+/* TODO:  - profileName should move inline with profilePhoto when narrowed and underneath it when embiggened
+*****************************************************************/
+* {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#profileItems img {
+  width: 75%;
+  border-radius: 50%;
+  display: block;
+}
+
+#profileName {
+  display: block;
+}
+
+.row, .column {
+  box-sizing: border-box;
+}
+
+.row::before, .row::after {
+  content: "";
+  display: table;
+}
+
+.row::after {
+  clear: both;
+}
+
+.column {
+  position: relative;
+  float: left;
+  margin: .5em 0 0 .5em;
+}
+
+.col-1 {
+  width: 16.5%;
+}
+
+.col-2 {
+  width: 33%;
+}
+
+.col-3 {
+  width: 49.5%;
+}
+
+.col-4 {
+  width: 66%;
+}
+
+.col-5 {
+  width: 82.5%;
+}
+
+.col-6 {
+  width: 99%;
+}
+
+.main-nav ul {
+  display: none;
+}
+
+.main-nav:active ul {
+  display: block;
+  margin-left: 0;
+  list-style: none;
+}
+
+@media only screen and (min-width:640px) {
+  #profileItems img {
+    display: inline;
+  }
+
+  .main-nav ul {
+    display: inline;
+    list-style: none;
+  }
+
+  li {
+    /*display: inline-block;*/
+    padding-right: .5em;
+  }
+
+  .social-media li {
+    display: inline-block;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+}
