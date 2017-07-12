@@ -1,4 +1,6 @@
-/* TODO:  - profileName should move inline with profilePhoto when narrowed and underneath it when embiggened
+/* TODO:
+  - profileName should move inline with profilePhoto when narrowed and underneath it when embiggened
+  - CSS needs to be refactored into base, layout, and module files
 *****************************************************************/
 * {
   font-family: sans-serif;
@@ -9,14 +11,14 @@ a {
   color: inherit;
 }
 
-#profileItems img {
-  width: 75%;
+#profile-items img {
+  max-width: 100%;
   border-radius: 50%;
   display: block;
 }
 
-#profileName {
-  display: block;
+#profile-name {
+  display: inline-block;
 }
 
 .row, .column {
@@ -72,9 +74,17 @@ a {
   list-style: none;
 }
 
+.template {
+  display: none;
+}
+
 @media only screen and (min-width:640px) {
-  #profileItems img {
+  #profile-items img {
     display: inline;
+  }
+
+  #profile-name {
+    display: block;
   }
 
   .main-nav ul {
