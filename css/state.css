@@ -37,15 +37,11 @@
 
   .main-nav ul {
     display: inline;
-    list-style: none;
   }
 
   li {
-    padding-right: .5em;
-  }
-
-  .social-media li {
-    display: inline-block;
+    padding: .2em 0;
+    list-style: none;
   }
 
   .icon-menu {

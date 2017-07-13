@@ -21,33 +21,42 @@
       </div>
       <nav class="main-nav">
         <i class="icon-menu"></i>
-        <ul class="languages">
-          <li>JavaScript</li>
-          <li>jQuery</li>
-          <li>CSS</li>
-          <li>HTML</li>
-        </ul>
-        <ul class="social-media">
+        <ul>
+          <li class="tab"><a href="#" data-content="project-section">Home</a></li>
+          <li class="tab"><a href="#" data-content="about-section">About Me</a></li>
           <li><a href="https://github.com/dbiehle" class="icon-github"></a></li>
           <li><a href="https://www.linkedin.com/in/drew-biehle-844a2b15" class="icon-linkedin"></a></li>
         </ul>
       </nav>
     </section>
-    <section class="column col-4" id="project-section">
+    <section class="column col-4 tab-content" id="project-section">
       <h2 class="underline">Projects</h2>
       <article class="template">
         <header>
           <h2 class="project-name">Project Name<h2>
-          <h5>published about <time>Created On</time> days ago</h5>
         </header>
-        <img src="" >
+        <h5>published about <time>Created On</time> days ago</h5>
         <div class="problem">Problem</div>
+        <hr>
         <div class="solution">Solution</div>
+        <img src="" >
         <div class="repo"><a href="">GitHub repo</a></div>
       </article>
     </section>
+    <section class="column col-4 tab-content" id="about-section">
+      <h2>Interests:</h2>
+      <p>I love learning new languages, both spoken and typed. Coding is a practice that offers constant learning opportunities so I'm on cloud 9. I also like grassy knolls, sassy trolls, droll lassies, and mango lassies. And Studio Ghibli movies.</p>
+      <h3>Languages:<h3>
+      <ul>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>CSS</li>
+        <li>HTML</li>
+      </ul>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/addprojects.js"></script>
+    <script src="js/viewprojects.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

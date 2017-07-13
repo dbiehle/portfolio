@@ -1,15 +1,6 @@
 /*
   Layout  selectors
 ***************************************************************************/
-#profile-items img {
-  border-radius: 50%;
-  display: block;
-}
-
-#profile-name {
-  display: inline-block;
-}
-
 .underline {
   border-bottom: 2px groove black;
   text-align: center;
@@ -38,4 +29,38 @@
 
 [class *= "col-"] {
   width: 100%;
+}
+
+hr {
+  border-bottom: 0.05em solid gray;
+  text-align: center;
+  max-width: 50%;
+}
+
+#project-section {
+  margin: 1em 0;
+}
+
+#project-section img {
+  border-radius: 10%;
+  max-width: 100%;
+}
+
+#profile-items img {
+  border-radius: 50%;
+  display: block;
+}
+
+#profile-name {
+  display: inline-block;
+}
+
+#about-section ul {
+
+}
+
+.repo {
+  float: right;
+  clear: both;
+  font-style: italic;
 }

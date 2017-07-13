@@ -7,8 +7,6 @@
 
 .main-nav:active ul {
   display: block;
-  margin-left: 0;
-  list-style: none;
 }
 
 .template {
