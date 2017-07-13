@@ -8,9 +8,17 @@
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #1db80a;
 }
 
 img {
   max-width: 100%;
+}
+
+h1, h3, h4 {
+  margin: 0;
+}
+
+h2, h5 {
+  margin: 0.4em 0;
 }

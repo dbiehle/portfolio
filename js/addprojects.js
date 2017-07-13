@@ -1,9 +1,7 @@
 'use strict';
 /*********************************************************
   TODO:
-    - Build an array of 3 objects of source data with similar properties and store them in their own JS file
-  Estimated time: about 1 hour
-  Actual time: about 1 hour.
+  
 ************************************************************/
 
 // addProjects object used in app.js

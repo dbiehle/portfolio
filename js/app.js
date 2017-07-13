@@ -2,15 +2,7 @@
 
 /*********************************************************
   TODO:
-    - create a new JS file to modify the source data and render it to the DOM
-        Estimated time: 1 hour
-        Actual time: about 1 hour
-    - use jQuery to clone the example markup for each project
-        Estimated time: 30 minutes
-        Actual time: about 30 minutes
-    - Project prototype needs a .toTheDom() function to add new data to the DOM
-        Estimated time: 30 minutes
-        Actual time: about 30 minutes
+    
 ************************************************************/
 var projectsArray = [];
 

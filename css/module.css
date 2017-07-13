@@ -5,10 +5,9 @@
   display: none;
 }
 
-.main-nav:active ul {
-  display: block;
-  margin-left: 0;
+.main-nav ul li {
   list-style: none;
+  padding: .2em;
 }
 
 .template {
