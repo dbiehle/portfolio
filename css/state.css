@@ -1,0 +1,54 @@
+/*
+  State of the site selectors
+  When screen is larger than 640px, for larger viewports, make that change
+***************************************************************************/
+@media only screen and (min-width:640px) {
+  .col-1 {
+    width: 16.5%;
+  }
+
+  .col-2 {
+    width: 32%;
+  }
+
+  .col-3 {
+    width: 49.5%;
+  }
+
+  .col-4 {
+    width: 65%;
+  }
+
+  .col-5 {
+    width: 82.5%;
+  }
+
+  .col-6 {
+    width: 99%;
+  }
+
+  #profile-items img {
+    display: inline;
+  }
+
+  #profile-name {
+    display: block;
+  }
+
+  .main-nav ul {
+    display: inline;
+    list-style: none;
+  }
+
+  li {
+    padding-right: .5em;
+  }
+
+  .social-media li {
+    display: inline-block;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+}

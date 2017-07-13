@@ -1,0 +1,16 @@
+/*
+  Module selectors
+***************************************************************************/
+.main-nav ul {
+  display: none;
+}
+
+.main-nav:active ul {
+  display: block;
+  margin-left: 0;
+  list-style: none;
+}
+
+.template {
+  display: none;
+}

@@ -1,0 +1,41 @@
+/*
+  Layout  selectors
+***************************************************************************/
+#profile-items img {
+  border-radius: 50%;
+  display: block;
+}
+
+#profile-name {
+  display: inline-block;
+}
+
+.underline {
+  border-bottom: 2px groove black;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.row, .column {
+  box-sizing: border-box;
+}
+
+.row::before, .row::after {
+  content: "";
+  display: table;
+}
+
+.row::after {
+  clear: both;
+}
+
+.column {
+  position: relative;
+  float: left;
+  margin: .5em 0 0 .5em;
+  width: 100%;
+}
+
+[class *= "col-"] {
+  width: 100%;
+}
