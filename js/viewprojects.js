@@ -8,5 +8,13 @@ $(document).ready(function() {
     $('section[id = "' + clickedValue + '"]').show();
   });
 
-  // $('.main-nav .tab:first').click();
+  $('.icon-menu').click(function() {
+    if ($('.main-nav ul').is(':visible')){
+      $('.main-nav ul').hide();
+    } else {
+      $('.main-nav ul').show();
+    }
+  });
+
+  $('.main-nav .tab:first').click();
 })

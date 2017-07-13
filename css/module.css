@@ -5,8 +5,9 @@
   display: none;
 }
 
-.main-nav:active ul {
-  display: block;
+.main-nav ul li {
+  list-style: none;
+  padding: .2em;
 }
 
 .template {
