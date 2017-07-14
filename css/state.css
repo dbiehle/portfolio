@@ -3,6 +3,36 @@
   When screen is larger than 640px, for larger viewports, make that change
 ***************************************************************************/
 @media only screen and (min-width:640px) {
+  /* Type scaling for desktop
+  **********************************************/
+
+  h1 {
+    font-size: 3em;
+    line-height: 1.05em;
+  }
+
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.25em;
+  }
+
+  h3 {
+    font-size: 1.75em;
+    line-height: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.22em;
+  }
+
+  h5 {
+    font-size: .9em;
+    line-height: 1em;
+  }
+
+  /* Grid layout
+  ******************************************/
   .col-1 {
     width: 16.5%;
   }
