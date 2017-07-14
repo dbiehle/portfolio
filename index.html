@@ -10,6 +10,19 @@
     <link rel="stylesheet" href="css/layout.css" type="text/css">
     <link rel="stylesheet" href="css/module.css" type="text/css">
     <link rel="stylesheet" href="css/state.css" type="text/css">
+    <script id="projectTemplate" type="text/x-handlebars-template">
+      <article>
+        <header>
+          <h2 class="project-name">{{projectName}}</h2>
+        </header>
+        <h5>published about <time>{{createdOn}}</time> days ago</h5>
+        <div class="problem">{{problem}}</div>
+        <hr>
+        <div class="solution">{{solution}}</div>
+        <div class="repo"><a href="{{repoLink}}">GitHub repo</a></div>
+        <img src="{{screenshot}}" >
+      </article>
+    </script>
   </head>
   <body>
     <header class="column col-2">
@@ -34,17 +47,6 @@
     </header>
     <section class="column col-4 tab-content" id="project-section">
       <h2 class="underline">Projects</h2>
-      <article class="template">
-        <header>
-          <h2 class="project-name">Project Name</h2>
-        </header>
-        <h5>published about <time>Created On</time> days ago</h5>
-        <div class="problem">Problem</div>
-        <hr>
-        <div class="solution">Solution</div>
-        <div class="repo"><a href="">GitHub repo</a></div>
-        <img src="" >
-      </article>
     </section>
     <section class="column col-4 tab-content" id="about-section">
       <h2>Interests:</h2>
@@ -53,6 +55,7 @@
       <p>JavaScript, jQuery, CSS, HTML, et un petit peu de fran&#231;ais</p>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script src="js/addprojects.js"></script>
     <script src="js/viewprojects.js"></script>
     <script src="js/app.js"></script>
