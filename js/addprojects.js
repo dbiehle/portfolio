@@ -1,10 +1,6 @@
 'use strict';
-/*********************************************************
-  TODO:
-  
-************************************************************/
 
-// addProjects object used in app.js
+// this addProjects object stores the different projects in the portfolio
 var addProjects = [
   {
     projectName:  'Choose Your Next Adventure',
@@ -27,7 +23,7 @@ var addProjects = [
     createdOn:    '2016-11-27',
     screenshot:   'lostKid',
     problem:      'Kids are wonderful but phones have all these cool games and fun ways to watch TV. So how can a parent or guardian keep up with where their kid went?',
-    solution:     'Where Did I LMC is a fun way to use social media and our incessantly recording-everything culure to keep an eye (or eyes) on your kids at all times.',
+    solution:     'Where Did I LMC is a fun way to use social media and our incessantly recording-everything culture to keep an eye (or eyes) on your kids at all times.',
     repoLink:     'https://github.com/LostKid/WDILMC'
   }
 ];

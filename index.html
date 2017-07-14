@@ -3,17 +3,31 @@
   <head>
     <title>Drew Biehle :: Software Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Varela+Round" rel="stylesheet">
     <link rel="stylesheet" href="vendor/normalize.css" type="text/css">
     <link rel="stylesheet" href="css/base.css" type="text/css">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/layout.css" type="text/css">
     <link rel="stylesheet" href="css/module.css" type="text/css">
     <link rel="stylesheet" href="css/state.css" type="text/css">
+    <script id="projectTemplate" type="text/x-handlebars-template">
+      <article>
+        <header>
+          <h2 class="project-name">{{projectName}}</h2>
+        </header>
+        <h5>published about <time>{{createdOn}}</time> days ago</h5>
+        <div class="problem">{{problem}}</div>
+        <hr>
+        <div class="solution">{{solution}}</div>
+        <div class="repo"><a href="{{repoLink}}">GitHub repo</a></div>
+        <img src="{{screenshot}}" >
+      </article>
+    </script>
   </head>
   <body>
-    <section class="column col-2">
+    <header class="column col-2">
       <div id="profile-items">
-        <img src="images/profilephoto.jpg" alt="Drew's profile photo">
+        <img src="images/profilephoto.jpg" alt="Drew's profile photo" />
         <div id="profile-name">
           <h1>Drew Biehle</h1>
           <h3>Software Developer</h3>
@@ -21,27 +35,18 @@
       </div>
       <nav class="main-nav">
         <div class="icon-menu"></div>
-        <ul>
-          <li class="tab" data-content="project-section"><a href="#">Home</a></li>
-          <li class="tab" data-content="about-section"><a href="#">About Me</a></li>
-          <li><a href="https://github.com/dbiehle" class="icon-github"></a></li>
-          <li><a href="https://www.linkedin.com/in/drew-biehle-844a2b15" class="icon-linkedin"></a></li>
-        </ul>
+        <div class="table">
+          <ul>
+            <li class="tab" data-content="project-section"><a href="#">Home</a></li>
+            <li class="tab" data-content="about-section"><a href="#">About Me</a></li>
+            <li><a href="https://github.com/dbiehle" class="icon-github"></a></li>
+            <li><a href="https://www.linkedin.com/in/drew-biehle-844a2b15" class="icon-linkedin"></a></li>
+          </ul>
+        </div>
       </nav>
-    </section>
+    </header>
     <section class="column col-4 tab-content" id="project-section">
       <h2 class="underline">Projects</h2>
-      <article class="template">
-        <header>
-          <h2 class="project-name">Project Name<h2>
-        </header>
-        <h5>published about <time>Created On</time> days ago</h5>
-        <div class="problem">Problem</div>
-        <hr>
-        <div class="solution">Solution</div>
-        <img src="" >
-        <div class="repo"><a href="">GitHub repo</a></div>
-      </article>
     </section>
     <section class="column col-4 tab-content" id="about-section">
       <h2>Interests:</h2>
@@ -50,6 +55,7 @@
       <p>JavaScript, jQuery, CSS, HTML, et un petit peu de fran&#231;ais</p>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script src="js/addprojects.js"></script>
     <script src="js/viewprojects.js"></script>
     <script src="js/app.js"></script>

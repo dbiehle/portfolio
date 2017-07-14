@@ -1,14 +1,10 @@
 'use strict';
 
-/*********************************************************
-  TODO:
-    
-************************************************************/
 var projectsArray = [];
 
 function Project (addProjectsObj) {
   this.projectName = addProjectsObj.projectName;
-  this.createdOn = addProjectsObj.createdOn;
+  this.createdOn= parseInt((new Date() - new Date(addProjectsObj.createdOn))/60/60/24/1000);
   this.screenshot = 'images/screenshots/' + addProjectsObj.screenshot + '.jpg';
   this.problem = addProjectsObj.problem;
   this.solution = addProjectsObj.solution;
@@ -16,17 +12,9 @@ function Project (addProjectsObj) {
 }
 
 Project.prototype.toTheDom = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
-
-  $newProject.find('h2.project-name').first().text(this.projectName);
-  $newProject.find('time').html(parseInt((new Date() - new Date(this.createdOn))/60/60/24/1000));
-  $newProject.find('img').attr('src', this.screenshot);
-  $newProject.find('div.problem').first().text(this.problem);
-  $newProject.find('div.solution').first().text(this.solution);
-  $newProject.find('div.repo a').attr('href', this.repoLink);
-
-  return $newProject;
+  var getProjectTemplate = $('#projectTemplate').html();
+  var projectCompiler = Handlebars.compile(getProjectTemplate);
+  return projectCompiler(this);
 };
 
 // addProjects defined in addprojects.js

@@ -1,5 +1,6 @@
 'use strict';
 
+//Two click handlers when the site loads that show/hide elements from the navigation
 $(document).ready(function() {
   $('.tab').click(function() {
     $('.tab-content, #project-section').show();

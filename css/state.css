@@ -31,20 +31,27 @@
     display: inline;
   }
 
-  #profile-name {
-    display: block;
+  #profile-name h1, h3{
+    display: inline-block;
   }
 
-  .main-nav ul {
+  .table {
     display: block;
+    margin: 0;
   }
 
-  li {
-    padding: .2em 0;
-    list-style: none;
+  .table ul {
+    display: block;
+    padding-left: 1em;
+  }
+
+  .table li {
+    display: block;
+    padding: .5em 0;
   }
 
   .icon-menu {
     display: none;
   }
+
 }
