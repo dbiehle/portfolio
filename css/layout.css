@@ -48,16 +48,20 @@ hr {
 
 #profile-items img {
   border-radius: 50%;
-  display: block;
+  display: inline;
 }
 
 #profile-name {
   display: inline-block;
 }
 
+.problem, .solution {
+  margin: 1em;
+}
 
 .repo {
   float: right;
   clear: both;
   font-style: italic;
+  margin: 0.5em;
 }

@@ -1,13 +1,27 @@
 /*
   Module selectors
 ***************************************************************************/
-.main-nav ul {
-  display: none;
+.icon-menu {
+  float: right;
+  margin-right: 2em;
+  font-size: 1.5em;
+  color: #1db80a;
 }
 
-.main-nav ul li {
+.table {
+  display: table;
+  margin: 0 auto;
+}
+
+.table ul {
+  display: none;
+  padding: 0 1em;
   list-style: none;
-  padding: .2em;
+}
+
+.table li {
+  padding-right: 2em;
+  display: inline;
 }
 
 .template {
