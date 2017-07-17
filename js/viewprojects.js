@@ -6,7 +6,7 @@ $(document).ready(function() {
     $('.tab-content, #project-section').show();
     $('.tab-content, #about-section').hide();
     var clickedValue = $(this).attr('data-content');
-    $('section[id = "' + clickedValue + '"]').show();
+    $(`section[id = "${clickedValue}"]`).show();
   });
 
   $('.icon-menu').click(function() {
