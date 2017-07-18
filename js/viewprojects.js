@@ -2,7 +2,8 @@
 
 //Two click handlers when the site loads that show/hide elements from the navigation
 $(document).ready(function() {
-  $('.tab').click(function() {
+  $('.tab').click(function(event) {
+    event.preventDefault();
     $('.tab-content, #project-section').show();
     $('.tab-content, #about-section').hide();
     var clickedValue = $(this).attr('data-content');

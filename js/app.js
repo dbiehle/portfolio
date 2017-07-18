@@ -17,7 +17,26 @@ Project.prototype.toTheDom = function() {
   return projectCompiler(this);
 };
 
-// addProjects defined in addprojects.js
+// need a $.getSON statement that gets the url for the JSON
+// also need a .then statement to handle what to do if successful
+function getData() {
+  const url = 'js/addprojects.json';
+  $.getJSON(url).then(
+    function(data) {
+  console.log('success!')
+  console.log(productsArray)
+    }, function(err) {
+  console.log('error')
+  console.log(err)
+  }
+  );
+}
+
+$(document).ready(function(){
+  getData();
+})
+
+
 addProjects.sort(function(a,b){
   return ((new Date(b.createdOn)) - (new Date(a.createdOn)));
 });
