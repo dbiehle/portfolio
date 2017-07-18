@@ -11,6 +11,7 @@ $(document).ready(function() {
   });
 
   $('.icon-menu').click(function() {
+    event.preventDefault();
     if ($('.main-nav ul').is(':visible')){
       $('.main-nav ul').hide();
     } else {
