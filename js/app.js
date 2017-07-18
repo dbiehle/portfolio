@@ -2,6 +2,10 @@
 
 var projectsArray = [];
 
+var projectFun = {
+  projectName: []
+};
+
 function Project (addProjectsObj) {
   this.projectName = addProjectsObj.projectName;
   this.createdOn= parseInt((new Date() - new Date(addProjectsObj.createdOn))/60/60/24/1000);
@@ -24,7 +28,9 @@ function getData() {
   $.getJSON(url).then(
     function(data) {
   console.log('success!')
-  console.log(productsArray)
+  // console.log(data)
+    projectsArray = data;
+  console.log(projectsArray)
     }, function(err) {
   console.log('error')
   console.log(err)
@@ -37,13 +43,13 @@ $(document).ready(function(){
 })
 
 
-addProjects.sort(function(a,b){
-  return ((new Date(b.createdOn)) - (new Date(a.createdOn)));
-});
-
-addProjects.forEach(function(projet){
-  projectsArray.push(new Project(projet));
-});
+// addProjects.sort(function(a,b){
+//   return ((new Date(b.createdOn)) - (new Date(a.createdOn)));
+// });
+//
+// addProjects.forEach(function(projet){
+//   projectsArray.push(new Project(projet));
+// });
 
 projectsArray.forEach(function(projAppend){
   $('#project-section').append(projAppend.toTheDom());
