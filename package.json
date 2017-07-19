@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Some of my projects and interests\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D, skills, and\u001b[2~ interests",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbiehle/portfolio.git"
+  },
+  "author": "Drew Biehle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbiehle/portfolio/issues"
+  },
+  "homepage": "https://github.com/dbiehle/portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
