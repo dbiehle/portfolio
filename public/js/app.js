@@ -23,9 +23,7 @@
       return ((new Date(b.createdOn)) - (new Date(a.createdOn)));
     });
 
-    rawData.forEach(function(projet){
-      Project.all.push(new Project(projet));
-    });
+    rawData.map(projet => Project.all.push(new Project(projet)));
 
     Project.all.forEach(function(projAppend){
       $('#project-section').append(projAppend.toTheDom());
