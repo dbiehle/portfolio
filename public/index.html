@@ -25,9 +25,11 @@
     </script>
     <script id="statsTemplate" type="text/x-handlebars-template">
       <h2 class="project-name">{{projectName}}</h2>
-      <div>{{numWordsProblem}} words in problem</div>
-      <hr>
-      <div>{{numWordsSolution}} words in solution</div>
+      <p>
+        {{numWordsProblem}} words in problem
+        <hr>
+        {{numWordsSolution}} words in solution
+      </p>
     </script>
   </head>
   <body>
@@ -64,12 +66,13 @@
       <h2 class="underline">Site Statistics</h2>
       <p>Here are some fun facts about this portfolio:
         <br>
-        <div id="stats-div"></div>
+        <div id="stats-placement"></div>
       </p>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="js/view/adminview.js"></script>
     <script src="js/viewprojects.js"></script>
     <script src="js/model/app.js"></script>
   </body>
