@@ -25,11 +25,8 @@
     </script>
     <script id="statsTemplate" type="text/x-handlebars-template">
       <h2 class="project-name">{{projectName}}</h2>
-      <p>
-        {{numWordsProblem}} words in problem
-        <hr>
-        {{numWordsSolution}} words in solution
-      </p>
+      <li>{{numWordsProblem}} words in problem</li>
+      <li>{{numWordsSolution}} words in solution</li>
     </script>
   </head>
   <body>
@@ -45,8 +42,8 @@
         <div class="icon-menu"></div>
         <div class="table">
           <ul>
-            <li class="tab" data-content="project-section"><a href="">Home</a></li>
-            <li class="tab" data-content="about-section"><a href="">About Me</a></li>
+            <li class="tab" data-content="project-section"><a href="/">Home</a></li>
+            <li class="tab" data-content="about-section"><a href="/about">About Me</a></li>
             <li><a href="https://github.com/dbiehle" class="icon-github"></a></li>
             <li><a href="https://www.linkedin.com/in/drew-biehle-844a2b15" class="icon-linkedin"></a></li>
           </ul>
@@ -64,16 +61,19 @@
     </section>
     <section class="column col-4 tab-content" id="stats-section">
       <h2 class="underline">Site Statistics</h2>
-      <p>Here are some fun facts about this portfolio:
-        <br>
-        <div id="stats-placement"></div>
-      </p>
+      <p>Here are some fun facts about this portfolio:</p>
+      <ul id="stats-placement"></ul>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script src="js/model/app.js"></script>
-    <script src="js/viewprojects.js"></script>
-    <script src="js/view/adminview.js"></script>
+    <script src="js/models/app.js"></script>
+    <script src="js/views/projectview.js"></script>
+    <script src="js/views/adminview.js"></script>
+    <script src="js/views/aboutview.js"></script>
+    <script src="js/controller/projectcontroller.js"></script>
+    <script src="js/controller/aboutcontroller.js"></script>
+    <script src="js/controller/admincontroller.js"></script>
+    <script src="js/controller/routes.js"></script>
   </body>
 </html>

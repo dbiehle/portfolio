@@ -1,18 +1,9 @@
 'use strict';
 
-page('/', function(){
-  $('.tab-content').hide();
-  $('#project-section').show();
-})
+var app = app || {};
 
-page('/about', function(){
-  $('.tab-content').hide();
-  $('#about-section').show();
-})
-
-page('/stats', function(){
-  $('.tab-content').hide();
-  $('#stats-section').show();
-})
+page('/', app.projectController.index)
+page('/about', app.aboutController.index);
+page('/stats', app.statsController.index);
 
 page();

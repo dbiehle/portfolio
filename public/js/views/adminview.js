@@ -12,7 +12,7 @@ var app = app || {};
     }
   }
 
-  app.Project.loadAll(adminView.initAdminPage);
+  adminView.initAdminPage();
 
   module.adminView = adminView;
 

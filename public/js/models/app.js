@@ -3,31 +3,43 @@
 var app = app || {};
 
 (function(module){
+
   function Project (addProjectsObj) {
-    this.projectName = addProjectsObj.projectName;
-    this.createdOn= parseInt((new Date() - new Date(addProjectsObj.createdOn))/60/60/24/1000);
-    this.screenshot = 'images/screenshots/' + addProjectsObj.screenshot + '.jpg';
-    this.problem = addProjectsObj.problem;
-    this.solution = addProjectsObj.solution;
-    this.repoLink = addProjectsObj.repoLink;
+    Object.keys(addProjectsObj).forEach(key => this[key] = addProjectsObj[key]);
   }
 
   Project.all = [];
 
   Project.prototype.toTheDom = function() {
-    var getProjectTemplate = $('#projectTemplate').html();
-    var projectCompiler = Handlebars.compile(getProjectTemplate);
+    var projectCompiler = Handlebars.compile($('#projectTemplate').html());
+
+    this.createdOn = parseInt((new Date() - new Date(this.createdOn))/60/60/24/1000);
+    this.screenshot = 'images/screenshots/' + this.screenshot + '.jpg';
+
     return projectCompiler(this);
   };
 
   Project.loadAll = rawData => {
     rawData.sort((a,b) => (new Date(b.createdOn)) - (new Date(a.createdOn)));
-
     Project.all = rawData.map(projet => new Project(projet));
+    console.log('hi from Project.loadAll section');
+  }
 
-    Project.all.forEach(function(projAppend){
-      $('#project-section').append(projAppend.toTheDom());
-    });
+  // Project.all.forEach(function(projAppend){
+  //   $('#project-section').append(projAppend.toTheDom());
+  // });
+
+  Project.getData = callback => {
+    $.getJSON('../../data/addprojects.json')
+      .then(
+      function(data) {
+        localStorage.setItem('projectList', JSON.stringify(data));
+        Project.loadAll(data);
+        callback();
+      }, function(err) {
+        console.error(err);
+      }
+    );
   }
 
   Project.numWordsProblem = () => {
@@ -62,25 +74,14 @@ var app = app || {};
     }
   };
 
-  function getData() {
-    $.getJSON('../../data/addprojects.json').then(
-      function(data) {
-        localStorage.setItem('projectList', JSON.stringify(data));
-        Project.loadAll(data);
-      }, function(err) {
-      console.error(err);
-    }
-    );
-  }
-
-  $(function(){
-    if (localStorage.projectList) {
-      let retrievedData = JSON.parse(localStorage.projectList);
-      Project.loadAll(retrievedData);
-    } else {
-      getData();
-    }
-  })
+  // $(function(){
+  //   if (localStorage.projectList) {
+  //     let retrievedData = JSON.parse(localStorage.projectList);
+  //     Project.loadAll(retrievedData);
+  //   } else {
+  //     Project.getData();
+  //   }
+  // })
 
   module.Project = Project;
 
