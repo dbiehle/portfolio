@@ -41,9 +41,14 @@ var app = app || {};
     return Project.all
         .map(proj => {
           return {
+            projectName: proj.projectName,
             numWordsProblem: Project.all
                 .filter(projMatch => projMatch.projectName === proj.projectName)
                 .map(ps => ps.problem.split(' ').length)
+                .reduce((acc, cur) => acc + cur),
+            numWordsSolution: Project.all
+                .filter(projMatch => projMatch.projectName === proj.projectName)
+                .map(ps => ps.solution.split(' ').length)
                 .reduce((acc, cur) => acc + cur)
           }
         })
@@ -53,6 +58,7 @@ var app = app || {};
     return Project.all
         .map(proj => {
           return {
+            projectName: proj.projectName,
             numWordsSolution: Project.all
                 .filter(projMatch => projMatch.projectName === proj.projectName)
                 .map(ps => ps.solution.split(' ').length)

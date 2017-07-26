@@ -8,7 +8,7 @@ var app = app || {};
   adminController.index = () => {
     $('.tab-content').hide();
     $('#stats-section').show();
-    // app.adminView.initAdminPage();
+    app.adminView.initAdminPage();
   }
 
   module.adminController = adminController;

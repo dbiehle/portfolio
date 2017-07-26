@@ -24,13 +24,11 @@
       </article>
     </script>
     <script id="statsTemplate" type="text/x-handlebars-template">
-      {{#each stats}}
-        <li>
-          <h2 class="project-name">{{projectName}}</h2>
-          {{numWordsProblem}} words in problem
-        </li>
-        <!-- <li>{{numWordsSolution}} words in solution</li> -->
-      {{/each}}
+      <li>
+        <h3 class="project-name">{{projectName}}</h3>
+        <br>
+        {{numWordsProblem}} words in problem / {{numWordsSolution}} words in solution
+      </li>
     </script>
   </head>
   <body>
