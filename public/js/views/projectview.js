@@ -26,12 +26,10 @@
   const projectView = {
     initProjectPage: () => {
       app.Project.all.forEach(proj => {
-        $('#project-section').append(proj.toTheDom('#projectTemplate'))
+        $('#project-section').append(proj.toTheDom())
       });
     }
   }
-
-  // app.Project.getData(projectView.initProjectPage);
 
   module.projectView = projectView;
 })(app);

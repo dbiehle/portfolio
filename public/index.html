@@ -24,9 +24,13 @@
       </article>
     </script>
     <script id="statsTemplate" type="text/x-handlebars-template">
-      <h2 class="project-name">{{projectName}}</h2>
-      <li>{{numWordsProblem}} words in problem</li>
-      <li>{{numWordsSolution}} words in solution</li>
+      {{#each stats}}
+        <li>
+          <h2 class="project-name">{{projectName}}</h2>
+          {{numWordsProblem}} words in problem
+        </li>
+        <!-- <li>{{numWordsSolution}} words in solution</li> -->
+      {{/each}}
     </script>
   </head>
   <body>
@@ -44,6 +48,7 @@
           <ul>
             <li class="tab" data-content="project-section"><a href="/">Home</a></li>
             <li class="tab" data-content="about-section"><a href="/about">About Me</a></li>
+            <li class="tab" data-content="stats-section"><a href="/stats">Stats</a></li>
             <li><a href="https://github.com/dbiehle" class="icon-github"></a></li>
             <li><a href="https://www.linkedin.com/in/drew-biehle-844a2b15" class="icon-linkedin"></a></li>
           </ul>
@@ -70,7 +75,6 @@
     <script src="js/models/app.js"></script>
     <script src="js/views/projectview.js"></script>
     <script src="js/views/adminview.js"></script>
-    <script src="js/views/aboutview.js"></script>
     <script src="js/controller/projectcontroller.js"></script>
     <script src="js/controller/aboutcontroller.js"></script>
     <script src="js/controller/admincontroller.js"></script>

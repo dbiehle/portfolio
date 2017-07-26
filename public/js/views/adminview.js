@@ -5,9 +5,9 @@ var app = app || {};
 (function(module){
   const adminView = {
     initAdminPage: () => {
-      let template = Handlebars.compile($('#statsTemplate').html());
+      const template = Handlebars.compile($('#statsTemplate').text());
       app.Project.numWordsProblem().forEach(stat => {
-        $('#stats-placement').append(template(stat))
+        $('#stats-placement').append(template(stat));
       });
     }
   }

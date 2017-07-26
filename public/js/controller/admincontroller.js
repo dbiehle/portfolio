@@ -4,12 +4,13 @@ var app = app || {};
 
 (function(module){
 
-  const statsController = {};
-  statsController.index = () => {
+  const adminController = {};
+  adminController.index = () => {
     $('.tab-content').hide();
     $('#stats-section').show();
+    // app.adminView.initAdminPage();
   }
 
-  module.statsController = statsController;
+  module.adminController = adminController;
 
 })(app);

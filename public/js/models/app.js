@@ -22,12 +22,7 @@ var app = app || {};
   Project.loadAll = rawData => {
     rawData.sort((a,b) => (new Date(b.createdOn)) - (new Date(a.createdOn)));
     Project.all = rawData.map(projet => new Project(projet));
-    console.log('hi from Project.loadAll section');
   }
-
-  // Project.all.forEach(function(projAppend){
-  //   $('#project-section').append(projAppend.toTheDom());
-  // });
 
   Project.getData = callback => {
     $.getJSON('../../data/addprojects.json')
@@ -73,15 +68,6 @@ var app = app || {};
       numWordsSolution: Project.numWordsSolution()
     }
   };
-
-  // $(function(){
-  //   if (localStorage.projectList) {
-  //     let retrievedData = JSON.parse(localStorage.projectList);
-  //     Project.loadAll(retrievedData);
-  //   } else {
-  //     Project.getData();
-  //   }
-  // })
 
   module.Project = Project;
 
