@@ -30,6 +30,17 @@
         {{numWordsProblem}} words in problem / {{numWordsSolution}} words in solution
       </li>
     </script>
+    <script id="reposTemplate" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank">
+          <h4>{{name}}</h4>
+        </a>
+        {{#if description}}
+          <p>Description: {{description}}</p>
+        {{/if}}
+        <p>Last updated: {{lastUpdated}}</p>
+      </li>
+    </script>
   </head>
   <body>
     <header class="column col-2">
@@ -66,11 +77,13 @@
       <h2 class="underline">Site Statistics</h2>
       <p>Here are some fun facts about this portfolio:</p>
       <ul id="stats-placement"></ul>
+      <ul id="repos-placement"></ul>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="js/models/app.js"></script>
+    <script src="js/models/repos.js"></script>
     <script src="js/views/projectview.js"></script>
     <script src="js/views/adminview.js"></script>
     <script src="js/controller/projectcontroller.js"></script>
