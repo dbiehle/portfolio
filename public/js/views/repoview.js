@@ -4,11 +4,9 @@ var app = app || {};
 
 (function(module){
   const repoView = {};
-
-  var template = Handlebars.compile($('#reposTemplate').html());
-
-  repoView.index = function(data) {
-    $('#repos-placement').append(template(data));
+  const render = Handlebars.compile($('#reposTemplate').html());
+  repoView.addTheRepos = function(data) {
+    return $('#repos-placement').append(render(data));
   }
   module.repoView = repoView;
 })(app);

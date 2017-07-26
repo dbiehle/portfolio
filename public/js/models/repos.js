@@ -18,12 +18,12 @@ var app = app || {};
     .then(function(data){
       repos.all = data.map(repo => ({
         name: repo.name,
-        description: repo.description,
         html_url: repo.html_url,
+        description: repo.description,
         lastUpdated: repo.updated_at
       }));
       callback();
     })
-  }
+  };
   module.repos = repos;
 })(app);
