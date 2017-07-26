@@ -37,7 +37,7 @@ var app = app || {};
     );
   }
 
-  Project.numWordsProblem = () => {
+  Project.numWordsProblemSolution = () => {
     return Project.all
         .map(proj => {
           return {
@@ -46,19 +46,6 @@ var app = app || {};
                 .filter(projMatch => projMatch.projectName === proj.projectName)
                 .map(ps => ps.problem.split(' ').length)
                 .reduce((acc, cur) => acc + cur),
-            numWordsSolution: Project.all
-                .filter(projMatch => projMatch.projectName === proj.projectName)
-                .map(ps => ps.solution.split(' ').length)
-                .reduce((acc, cur) => acc + cur)
-          }
-        })
-  };
-
-  Project.numWordsSolution = () => {
-    return Project.all
-        .map(proj => {
-          return {
-            projectName: proj.projectName,
             numWordsSolution: Project.all
                 .filter(projMatch => projMatch.projectName === proj.projectName)
                 .map(ps => ps.solution.split(' ').length)
