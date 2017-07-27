@@ -9,16 +9,20 @@ var app = app || {};
 
   repos.requestRepos = function(callback){
     $.get('/github/user/repos')
-      .then(data => repos.all = data)
-      .then(callback);
+    .then(function(data){
+      repos.all = data.map(repo => ({
+        name: repo.name,
+        html_url: repo.html_url,
+        description: repo.description,
+        lastUpdated: repo.updated_at
+      }));
+    })
+      callback();
   };
+
   module.repos = repos;
 })(app);
 
-// .then(function(data){
-//   repos.all = data.map(repo => ({
-//     name: repo.name,
-//     html_url: repo.html_url,
-//     description: repo.description,
-//     lastUpdated: repo.updated_at
-//   }));
+
+.then(data => repos.all = data)
+.then(callback);
