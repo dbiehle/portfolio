@@ -17,12 +17,12 @@ var app = app || {};
         lastUpdated: repo.updated_at
       }));
     })
-      callback();
+    callback();
   };
 
   module.repos = repos;
 })(app);
 
 
-.then(data => repos.all = data)
-.then(callback);
+// .then(data => repos.all = data)
+// .then(callback);
