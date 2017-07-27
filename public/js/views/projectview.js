@@ -25,6 +25,7 @@
 (function(module){
   const projectView = {
     initProjectPage: () => {
+      $('#project-section').empty();
       app.Project.all.forEach(proj => {
         $('#project-section').append(proj.toTheDom())
       });
