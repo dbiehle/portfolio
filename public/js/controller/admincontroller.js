@@ -9,7 +9,7 @@ var app = app || {};
     $('.tab-content').hide();
     $('#stats-section').show();
     app.adminView.initAdminPage();
-    app.repos.requestRepos(app.repoView.addTheRepos);
+    app.repos.requestRepos(app.repoView.renderTheRepos);
   }
 
   module.adminController = adminController;
