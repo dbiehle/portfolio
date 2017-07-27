@@ -7,7 +7,7 @@
     "$": true,
     "marked": true,
     "hljs": true,
-    "githubtoken": true
+    "GITHUB_TOKEN": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {
