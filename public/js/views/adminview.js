@@ -6,6 +6,7 @@ var app = app || {};
   const adminView = {
     initAdminPage: () => {
       const template = Handlebars.compile($('#statsTemplate').html());
+      $('#stats-placement').empty();
       app.Project.numWordsProblemSolution().forEach(stat => {
         $('#stats-placement').append(template(stat));
       });
