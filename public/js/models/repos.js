@@ -8,7 +8,7 @@ var app = app || {};
   repos.all = [];
 
   repos.requestRepos = function(callback){
-    $.get('/github/user/repos')
+    $.get('github/user/repos')
     .then(function(data){
       repos.all = data.map(repo => ({
         name: repo.name,
