@@ -32,8 +32,9 @@
     </script>
     <script id="reposTemplate" type="text/x-handlebars-template">
       <li>
-        <a href="/stats/:name"><h4>{{name}}</h4></a>
+        <a href="/stats/{{name}}"><h4>{{name}}</h4></a>
         <a href="{{html_url}}" target="_blank">{{html_url}}</a>
+        <br>
         Description: {{description}}
         <br>
         Last updated: {{lastUpdated}}
