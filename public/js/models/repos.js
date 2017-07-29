@@ -20,7 +20,10 @@ var app = app || {};
   //   })
   // };
   repos.requestRepos = function(ctx, next){
-    $.get('github/user/repos')
+    $.ajax({
+      url: '/github/user/repos',
+      method: 'GET'
+    })
     .then(function(data){
       repos.all = data.map(repo => ({
         name: repo.name,
