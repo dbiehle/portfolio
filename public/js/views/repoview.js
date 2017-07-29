@@ -7,7 +7,7 @@ var app = app || {};
   const render = Handlebars.compile($('#reposTemplate').html());
   repoView.renderTheRepos = () => {
     $('#repos-placement').empty();
-    module.ctx.repos.forEach(data => {
+    module.repos.all.forEach(data => {
       $('#repos-placement').append(render(data));
     })
   }
