@@ -8,7 +8,10 @@ var app = app || {};
   repos.all = [];
 
   repos.requestRepos = function(callback){
-    $.get('github/user/repos')
+    $.ajax({
+      url: 'github/user/repos',
+      method: 'GET'
+    })
     .then(function(data){
       repos.all = data.map(repo => ({
         name: repo.name,
@@ -19,6 +22,7 @@ var app = app || {};
       callback(repos.all);
     })
   };
+
   // repos.requestRepos = function(ctx, next){
   //   $.ajax({
   //     url: '/github/user/repos',
