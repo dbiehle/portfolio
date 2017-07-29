@@ -23,22 +23,22 @@ var app = app || {};
     })
   };
 
-  repos.requestRepoByName = function(ctx, next){
-    $.ajax({
-      url: `/github/user/repos/${ctx.params.name}`,
-      method: 'GET'
-    })
-    .then(function(data){
-      var mappedData = data.map(repo => ({
-        name: repo.name,
-        html_url: repo.html_url,
-        description: repo.description,
-        lastUpdated: repo.updated_at
-      }));
-      ctx.repos = mappedData;
-      next();
-    })
-  };
+  // repos.requestRepoByName = function(ctx, next){
+  //   $.ajax({
+  //     url: `/github/user/repos/${ctx.params.name}`,
+  //     method: 'GET'
+  //   })
+  //   .then(function(data){
+  //     var mappedData = data.map(repo => ({
+  //       name: repo.name,
+  //       html_url: repo.html_url,
+  //       description: repo.description,
+  //       lastUpdated: repo.updated_at
+  //     }));
+  //     ctx.repos = mappedData;
+  //     next();
+  //   })
+  // };
 
   module.repos = repos;
 })(app);

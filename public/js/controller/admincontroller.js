@@ -12,6 +12,13 @@ var app = app || {};
     app.repos.requestRepos(app.repoView.renderTheRepos);
   }
 
+// This is a test function to see if this could work and be called in routes.js
+  adminController.findRepo = function(ctx, next) {
+    let singleRepo = app.repos.all(repo => repo.name === ctx.params.name);
+    app.repos = singleRepo;
+    next();
+  }
+
   module.adminController = adminController;
 
 })(app);
